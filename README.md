@@ -6,7 +6,7 @@
 >
 > **One-liner:** Clone-and-run pipeline from DICOM ingest → QC → AI segmentation → expert Slicer review → DICOM-SEG + provenance — with a custom Slicer extension and deployable portfolio site.
 
-**Replace `<your-portfolio-url>` and `<your-github-username>` before submitting.**
+**Portfolio:** https://vdewatha.github.io/mi-slicer-eligibility-kit/ · **Repo:** https://github.com/vdewatha/mi-slicer-eligibility-kit
 
 ---
 
@@ -373,6 +373,6 @@ MIT — use and adapt for your portfolio. Replace pipeline-generated session ima
 
 | Item | URL |
 |------|-----|
-| Live portfolio | `https://<your-portfolio-url>/` |
-| GitHub repo | `https://github.com/<your-github-username>/mi-slicer-eligibility-kit` |
+| Live portfolio | `https://vdewatha.github.io/mi-slicer-eligibility-kit/` |
+| GitHub repo | `https://github.com/vdewatha/mi-slicer-eligibility-kit` |
 | Screen recording (optional) | `https://youtube.com/watch?v=...` |
