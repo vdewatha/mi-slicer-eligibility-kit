@@ -1,0 +1,19 @@
+{
+  "cases": [
+    {
+      "case_id": "spleen_001",
+      "ai_only": {
+        "dice": 0.9778,
+        "hd95_mm": 1.0
+      },
+      "expert_corrected": {
+        "dice": 0.9778,
+        "hd95_mm": 1.0
+      }
+    }
+  ],
+  "aggregate": {
+    "mean_dice_ai": 0.9778,
+    "mean_dice_corrected": 0.9778
+  }
+}

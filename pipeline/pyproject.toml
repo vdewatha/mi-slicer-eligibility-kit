@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medasset"
+version = "1.0.0"
+description = "Medical imaging digital asset pipeline for 3D Slicer AI research"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.11",
+    "pydicom>=2.4",
+    "SimpleITK>=2.3",
+    "highdicom>=0.22",
+    "matplotlib>=3.8",
+    "Pillow>=10.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1"]
+
+[project.scripts]
+medasset-ingest = "medasset.cli:cmd_ingest"
+medasset-qc = "medasset.cli:cmd_qc"
+medasset-infer = "medasset.cli:cmd_infer"
+medasset-metrics = "medasset.cli:cmd_metrics"
+medasset-export = "medasset.cli:cmd_export"
+medasset-figures = "medasset.cli:cmd_figures"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["medasset*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

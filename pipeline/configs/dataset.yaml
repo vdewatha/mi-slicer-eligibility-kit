@@ -1,0 +1,26 @@
+dataset: Task09_Spleen
+modality: CT
+structure: spleen
+source: http://medicaldecathlon.com/
+
+paths:
+  raw: data/raw/Task09_Spleen
+  processed: data/processed
+  labels_reference: data/labels/reference
+  labels_expert: data/labels/expert
+  inference: data/inference
+  exports: data/exports
+
+qc:
+  hu_min: -1024
+  hu_max: 3071
+  min_slices: 10
+
+inference:
+  backend: classical  # classical | nnunet
+  nnunet_dataset_id: 9
+  nnunet_config: 3d_fullres
+
+metrics:
+  target_dice_corrected: 0.95
+  target_hd95_mm: 5.0

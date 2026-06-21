@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Medical imaging digital asset pipeline — 3D Slicer, DICOM-SEG, AI research">
+  <title>Medical Imaging &amp; 3D Slicer Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <span class="nav-logo">MedAsset Pipeline</span>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#metrics">Metrics</a></li>
+        <li><a href="#pipeline">Pipeline</a></li>
+        <li><a href="#workflows">Workflows</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero-label">Medical Imaging &amp; 3D Slicer</p>
+      <h1 class="hero-title">AI Research Digital Asset Pipeline</h1>
+      <p class="hero-subtitle">
+        End-to-end reproducible workflow: DICOM ingest → QC → AI segmentation → expert Slicer review →
+        DICOM-SEG export with provenance — built for cutting-edge medical imaging AI research.
+      </p>
+      <p class="hero-meta">
+        <span id="portfolio-owner">Medical Imaging Portfolio</span>
+        &middot;
+        <span id="portfolio-updated">Updated: —</span>
+      </p>
+      <div class="hero-badges">
+        <span class="badge badge-ok" id="ci-badge">Pipeline: reproducible</span>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2 class="section-title">Tools &amp; Stack</h2>
+      <ul class="skills-list">
+        <li class="skill-badge skill-slicer">3D Slicer</li>
+        <li class="skill-badge skill-dicom">DICOM / DICOM-SEG</li>
+        <li class="skill-badge skill-python">Python</li>
+        <li class="skill-badge skill-sitk">SimpleITK</li>
+        <li class="skill-badge skill-ai">nnU-Net</li>
+        <li class="skill-badge skill-seg">Segment Editor</li>
+        <li class="skill-badge skill-ext">Slicer Extension</li>
+      </ul>
+    </section>
+
+    <section id="metrics" class="metrics-section">
+      <h2 class="section-title">Segmentation Metrics</h2>
+      <p class="section-desc">Reproducible Dice and HD95 from <code>make metrics</code> on MSD Task09 Spleen.</p>
+      <div id="metrics-panel" class="metrics-panel">
+        <p class="metrics-loading">Loading metrics…</p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid" id="project-grid"></div>
+    </section>
+
+    <section id="pipeline" class="pipeline-section">
+      <h2 class="section-title">Reproducible Pipeline</h2>
+      <p class="section-desc">Clone the repo and run one command to regenerate all metrics and portfolio figures.</p>
+      <pre class="code-block"><code>git clone &lt;your-repo-url&gt;
+cd mi-slicer-eligibility-kit/pipeline
+make setup &amp;&amp; make validate</code></pre>
+      <p class="section-desc">Custom Slicer extension: <code>extensions/MedAssetPipeline/</code> — QC, Dice validation, DICOM-SEG + provenance export.</p>
+    </section>
+
+    <section id="workflows" class="workflows">
+      <h2 class="section-title">Workflow Documentation</h2>
+      <p class="section-desc">
+        Expert decision logs with technical rationale — structured for AI-training-style workflow capture.
+      </p>
+      <ul class="workflow-list" id="workflow-list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>MI Slicer Eligibility Kit &middot; Deploy via GitHub Pages or Netlify</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Deploy the portfolio/ folder as the site root.
+# Netlify UI: Site settings → Build & deploy → Publish directory: portfolio
+# Or drag portfolio/ to https://app.netlify.com/drop
+
+[build]
+  publish = "portfolio"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"

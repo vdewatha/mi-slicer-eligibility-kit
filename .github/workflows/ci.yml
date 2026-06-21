@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          cd pipeline
+          pip install -e ".[dev]"
+
+      - name: Run unit tests
+        run: |
+          cd pipeline
+          pytest tests/ -v
+
+      - name: Run full pipeline validation
+        run: |
+          cd pipeline
+          make validate
+
+      - name: Upload metrics artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: segmentation-metrics
+          path: portfolio/assets/segmentation-metrics.json
+          if-no-files-found: ignore

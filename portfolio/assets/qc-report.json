@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-06-21T16:28:39.134389+00:00",
+  "pipeline_version": "1.0.0",
+  "total_cases": 1,
+  "passed": 1,
+  "failed": 0,
+  "cases": [
+    {
+      "case_id": "spleen_001",
+      "status": "pass",
+      "issues": [],
+      "spacing_mm": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "size_voxels": [
+        128,
+        128,
+        64
+      ],
+      "hu_range": [
+        -209.15,
+        95.42
+      ],
+      "orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ]
+}

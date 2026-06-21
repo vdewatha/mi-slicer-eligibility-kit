@@ -1,0 +1,1 @@
+"""MedAssetPipeline extension package."""

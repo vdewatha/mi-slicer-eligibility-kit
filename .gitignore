@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Data (download via make data)
+data/raw/
+data/processed/
+data/labels/
+data/inference/
+data/exports/
+*.nii.gz
+*.nrrd
+!portfolio/assets/sample-spleen.dcm
+
+# Build
+extensions/**/build/
+extensions/**/_*.pyc
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Env
+.env
+.env.local
